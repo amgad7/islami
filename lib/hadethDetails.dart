@@ -21,11 +21,23 @@ class HadethDetails extends StatelessWidget {
         body: Card(
           child: Center(
             child: Container(
-              padding: EdgeInsets.all(12),
-              height: MediaQuery.of(context).size.height*.7,
-              child: ListView.builder(itemBuilder: (context, index) {
-                return Text(model.content[index],textAlign: TextAlign.center,);
-              },itemCount: model.content.length,),
+              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+              height: MediaQuery.of(context).size.height * .6,
+              alignment: Alignment.center,
+              margin: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white
+              ),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Text(
+                    model.content[index],
+                    textAlign: TextAlign.center,
+                  );
+                },
+                itemCount: model.content.length,
+              ),
             ),
           ),
         ),

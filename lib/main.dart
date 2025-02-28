@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/hadethDetails.dart';
 import 'package:islami/home/tabs/ahadeth_tab.dart';
 import 'package:islami/my_theme.dart';
@@ -18,11 +19,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
       initialRoute: SplashScreen.routeName,
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
       themeMode: ThemeMode.light,
+      locale: Locale("en"),
       routes: {
         SplashScreen.routeName:(context)=>SplashScreen(),
         HomeScreen.routeName:(context)=>HomeScreen(),

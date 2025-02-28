@@ -7,15 +7,15 @@ class MyThemeData{
     textTheme: TextTheme(
       bodyLarge: GoogleFonts.elMessiri(
         fontSize: 30,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w600,
       ),
       bodyMedium: GoogleFonts.elMessiri(
         fontSize: 25,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w500,
       ),
       bodySmall: GoogleFonts.elMessiri(
         fontSize: 20,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.w400,
       ),
     ),
     brightness: Brightness.light,
@@ -32,6 +32,7 @@ class MyThemeData{
       appBarTheme: AppBarTheme(
           backgroundColor: Colors.transparent,
           centerTitle: true,
+          elevation: 0,
           iconTheme: IconThemeData(
             color: Colors.black,
             size: 30,

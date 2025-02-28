@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/my_theme.dart';
 import 'package:islami/suraDetails.dart';
 import 'package:islami/models/sura_model.dart';
@@ -135,10 +135,8 @@ class QuranTab extends StatelessWidget {
           thickness: 3,
           color: Color(0xFFB7935F),
         ),
-        Text(
-          "Sura Name",
-          style: Theme.of(context).textTheme.bodyLarge
-        ),
+        Text(AppLocalizations.of(context)!.sura_name,
+            style: Theme.of(context).textTheme.bodyLarge),
         Divider(
           thickness: 3,
           color: MyThemeData.PrimaryColor,
@@ -155,14 +153,12 @@ class QuranTab extends StatelessWidget {
               return InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, SuraDetailsScreen.routeName,
-                  arguments: SuraModel(name: suraNames[index], index: index)
-                  );
+                      arguments:
+                          SuraModel(name: suraNames[index], index: index));
                 },
-                child: Text(
-                  suraNames[index],
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyMedium
-                ),
+                child: Text(suraNames[index],
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodyMedium),
               );
             },
             itemCount: suraNames.length,
