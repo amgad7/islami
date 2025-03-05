@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami/provider/myProvider.dart';
+import 'package:provider/provider.dart';
 import 'tabs/ahadeth_tab.dart';
 import 'tabs/quran_tab.dart';
 import 'tabs/radio_tab.dart';
@@ -22,17 +23,18 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
     return Stack(
       children: [
         Image.asset(
-          "assets/images/background.png",
+          provider.getBackgroundPath(),
           fit: BoxFit.fill,
           width: double.infinity,
         ),
         Scaffold(
           appBar: AppBar(
             title: Text(
-              "إسلامي",
+              AppLocalizations.of(context)!.app_name,
 
             ),
           ),
