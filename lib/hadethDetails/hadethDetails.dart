@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/models/hadethModel.dart';
+import 'package:islami/provider/myProvider.dart';
+import 'package:provider/provider.dart';
 
 class HadethDetails extends StatelessWidget {
   static const String routeName = "hadeth";
@@ -7,11 +9,12 @@ class HadethDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var pr=Provider.of<MyProvider>(context);
     var model = ModalRoute.of(context)!.settings.arguments as HadethModel;
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/background.png"),
+            image: AssetImage(pr.getBackgroundPath()),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
