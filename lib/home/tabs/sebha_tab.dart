@@ -43,7 +43,7 @@ class _SebhaTabState extends State<SebhaTab> {
                   height: 25,
                 ),
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(17),
                   decoration: BoxDecoration(
                     color: MyThemeData.PrimaryColor,
                     borderRadius: BorderRadius.circular(25),
@@ -68,7 +68,7 @@ class _SebhaTabState extends State<SebhaTab> {
                     setState(() {});
                   },
                   child: Container(
-                    padding: EdgeInsets.all(13),
+                    padding: EdgeInsets.all(15),
                     decoration: BoxDecoration(
                         color: MyThemeData.PrimaryColor,
                         borderRadius: BorderRadius.circular(25)),
